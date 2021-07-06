@@ -2,3 +2,9 @@ thusday 2021 july 6 at 00:30 AM : start of make the torre_back_end
 thusday 2021 july 6 at 01:30 AM : get done with user route and controller to be consumed by frontend
 thusday 2021 july 6 at 02:24 AM : create jobs controller and route to be consumed by frontend, still needs to be tested
 thusday 2021 july 6 at 02:34 AM : go to sleep
+thusday 2021 july 6 at 11:30 AM : arrive to workspace and start
+thusday 2021 july 6 at 12:30 PM : modify controllers and routes, also creacte controller for jobs and route.
+thusday 2021 july 6 at 12:40 PM : create torre_front_end in react. almost all routes are working.
+thusday 2021 july 6 at 13:00 PM : go to lunch
+
+
