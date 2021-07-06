@@ -2,10 +2,12 @@
 const axios = require("axios");
 
 const controller = {
-  getUser: async (req, res) => {
-    const { user } = req.query;
+  getJobs: async (req, res) => {
+    const { size, aggregate, offset } = req.query;
     await axios
-      .get(`https://bio.torre.co/api/bios/${user}`)
+      .post(
+        `https://search.torre.co/opportunities/_search?size=${size}&aggregate=${aggregate}&offset=${offset}`
+      )
       .then((result) => {
         res.status(200).send(result.data);
       })
