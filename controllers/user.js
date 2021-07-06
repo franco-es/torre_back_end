@@ -7,7 +7,9 @@ const controller = {
     await axios
       .get(`https://bio.torre.co/api/bios/${user}`)
       .then((result) => {
-        res.status(200).send(result.data);
+        const persona = result.data;
+        delete persona.professionalCultureGenomeResults;
+        res.status(200).json(persona);
       })
       .catch((err) => res.status(500).send(err));
   },
