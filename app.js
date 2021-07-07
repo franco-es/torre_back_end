@@ -9,12 +9,12 @@ const peopleRoute = require("./routes/peopleRoute");
 
 const app = express();
 
-// ENDPOINTS
-app.use("/api", userRoute);
-app.use("/api", jobRoute);
-app.use("/api", peopleRoute);
+// MIDDLEWARES
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // CORS
+
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -25,8 +25,8 @@ app.use((req, res, next) => {
   res.header("Allow", "GET, POST, OPTIONS, PUT, DELETE");
   next();
 });
-// MIDDLEWARES
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
+// ENDPOINTS
+app.use("/api", userRoute);
+app.use("/api", jobRoute);
+app.use("/api", peopleRoute);
 module.exports = app;
